@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 						sourceMap: false
 					},
 					files: {
-						'build/js/app.js': ['src/js/app.js']
+						'build/js/app.js': ['build/js/app.js']
 					}
 				}
 			},
