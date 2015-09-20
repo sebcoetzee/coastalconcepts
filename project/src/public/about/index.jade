@@ -1,0 +1,59 @@
+- var title = "Coastal Concepts - About";
+
+include ../../templates/header.jade
+
+	body
+		include ../../templates/navbar.jade
+		// main flex slider end
+		section#content-region-3.padding-40.page-tree-bg
+			.container
+				h3.page-tree-text
+					| About us
+		// page tree end here
+		.space-70
+		.container
+			.row
+				.col-md-6
+					h4.heading-mini About our company
+					p
+						| With a strong background in marine structural engineering, Coastal Concepts strives to deliver specialist marine engineering solutions through extensive product research and development. Our services range from detailed design to manufacturing and installation of bespoke products. We pride ourselves on understanding individual customer requirements and tailoring solutions to suit.celerisque sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+					p
+						| We are pleased to announce the latest addition to our product range, the Sacrificial High Energy Fender. The Sacrificial Fender affords a greater protection to the berthing structure and vessel alike by harnessing the plastic and elastic properties of steel to allow extremely large energy absorption.
+					p
+						| Our ever growing product range currently boasts the following innovative solutions:
+					br
+					ul.icon-list.list-unstyled
+						li
+							i.ion-record
+							| Sacrificial High Energy Fender
+						li
+							i.ion-record
+							| De-watering Cope Shutter
+						li
+							i.ion-record
+							| Pile Guide Frame
+						li
+							i.ion-record
+							| Modular Barges
+						li
+							i.ion-record
+							| Instant Jetties
+					p
+						| All products are manufactured by our reputable manufacturers and undergo stringent quality control checks prior to delivery onsite. Should you require assistance with installation or any site bound queries, we will be glad to assist.
+					h4.heading-mini Not seeing what you are looking for?
+					p
+						| We are ever developing new innovative solutions and if you can’t find what you are looking for, please contact us to see how we can assist you.
+				.col-md-6
+					.flexslider
+						ul.slides
+							li
+								img.img-responsive(src='/img/about/barge.jpg', alt='')
+							li
+								img.img-responsive(src='/img/about/barge2.jpg', alt='')
+							li
+								img.img-responsive(src='/img/about/wholeunit.jpg', alt='')
+					// flex slider
+			// about company row end
+		.space-70
+		include ../../templates/footer.jade
+		include ../../templates/scripts.jade
