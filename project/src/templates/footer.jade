@@ -53,18 +53,24 @@
 			.col-md-5
 				.footer-col
 					h3 Get in touch
-					form
+					form#contact-footer
 						.row
 							.col-md-6
-								input.form-control(type='text', placeholder='Name...')
+								input#contact-footer-name.form-control(type='text', placeholder='Name...')
 							.col-md-6
-								input.form-control(type='email', placeholder='Email...')
+								input#contact-footer-email.form-control(type='email', placeholder='Email...')
 							.col-md-12
-								input.form-control(type='text', placeholder='Subject...')
+								input#contact-footer-subject.form-control(type='text', placeholder='Subject...')
 							.col-md-12
-								textarea.form-control(placeholder='Massage...', rows='7')
+								textarea#contact-footer-message.form-control(placeholder='Massage...', rows='7')
+							.col-md-12
+								#contactFooterCaptcha
+							#contact-footer-status-message.hidden.col-md-12
+								.space-20
+								p.success
+									| The status message will appear here.
 							.col-md-12.text-right
-								button.btn.btn-lg.btn-white(type='submit') Send massege
+								button.btn.btn-lg.btn-white(type='submit') Send message
 			// get in touch col end
 		// footer main row end
 		.space-70
@@ -74,7 +80,7 @@
 					i.ion-earth(style="font-size: 42px;")
 				.space-20
 				span
-					| © Coastal Concepts 2015. Design by 
+					| © Coastal Concepts 2015. Built by
 					a.hover-color(href='http://sebastiancoetzee.com') Sebastian Coetzee
 		// footer copyright row end
 	// container

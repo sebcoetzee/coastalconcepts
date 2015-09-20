@@ -73,10 +73,11 @@ Vagrant.configure(2) do |config|
 
     sudo apt-get -y install nginx
     sudo cp /home/vagrant/mount/nginx.conf /etc/nginx/nginx.conf
-    service nginx restart
+    sudo service nginx restart
 
-    sudo npm install roots -g
-
+    sudo npm install grunt-cli -g
+    sudo npm install bower -g
+    sudo npm install tsd -g
 
   SHELL
 
