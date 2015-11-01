@@ -38,6 +38,16 @@ module.exports = function(grunt) {
 						}
 					]
 				}
+			},
+			copy: {
+				html: {
+					expand: true,
+					cwd: 'src/html/',
+					src: '**',
+					dest: 'build/',
+					flatten: true,
+					filter: 'isFile'
+				}
 			}
 		}
 	);
@@ -47,8 +57,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-ts');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['less', 'exec:jadeProd', 'ts:build', 'concat:build', 'uglify:prod']);
-	grunt.registerTask('dev', ['less', 'exec:jadeDev', 'ts:build', 'concat:build']);
+	grunt.registerTask('default', ['less', 'exec:jadeProd', 'ts:build', 'concat:build', 'uglify:prod', 'copy:html']);
+	grunt.registerTask('dev', ['less', 'exec:jadeDev', 'ts:build', 'concat:build', 'copy:html']);
 
 };
