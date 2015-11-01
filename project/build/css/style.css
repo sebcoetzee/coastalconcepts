@@ -1819,3 +1819,6 @@ MULTI LEVEL DROPDOWN CSS
 .hidden {
   display: none !important;
 }
+.slider-overlay {
+  background-color: rgba(0, 0, 0, 0.05);
+}
