@@ -1,9 +1,4 @@
 /.idea
 /.vagrant
-/project/.tscache
-/project/build/index.html
-/project/build/products
-/project/build/about
-/project/build/contact-us
-/project/src/typings
 /project/src/tsCompiled
+/project/src/typings
