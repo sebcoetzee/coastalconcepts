@@ -2,3 +2,4 @@
 /.vagrant
 /project/src/tsCompiled
 /project/src/typings
+.tscache
