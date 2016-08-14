@@ -19,17 +19,38 @@ module.exports = function(grunt) {
 						sourceMap: false
 					},
 					files: {
-						'build/js/app.js': ['build/bower_components/jquery/dist/jquery.min.js', 'build/bower_components/bootstrap/dist/js/bootstrap.min.js', 'build/bower_components/jquery.easing/jquery.easing.min.js', 'build/bower_components/jquery-migrate/jquery-migrate.min.js', 'build/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js', 'build/bower_components/jquery-placeholder/jquery.placeholder.min.js', 'build/bower_components/jquery-sticky/jquery.sticky.js', 'build/bower_components/flexslider/jquery.flexslider-min.js', 'build/bower_components/mixitup/src/jquery.mixitup.js', 'build/bower_components/parallax/deploy/jquery.parallax.min.js', 'build/bower_components/wow/dist/wow.min.js', 'src/js/analytics.js', 'src/tsCompiled/*.js', 'build/js/app.js']
+						'build/js/app.js': ['build/js/app.js']
 					}
 				}
 			},
 			concat: {
 				build_js: {
-					src: ['build/bower_components/jquery/dist/jquery.min.js', 'build/bower_components/bootstrap/dist/js/bootstrap.min.js', 'build/bower_components/jquery.easing/jquery.easing.min.js', 'build/bower_components/jquery-migrate/jquery-migrate.min.js', 'build/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js', 'build/bower_components/jquery-placeholder/jquery.placeholder.min.js', 'build/bower_components/jquery-sticky/jquery.sticky.js', 'build/bower_components/flexslider/jquery.flexslider-min.js', 'build/bower_components/mixitup/src/jquery.mixitup.js', 'build/bower_components/parallax/deploy/jquery.parallax.min.js', 'build/bower_components/wow/dist/wow.min.js', 'src/js/analytics.js', 'src/tsCompiled/*.js', 'build/js/app.js'],
+					src: [
+						'build/bower_components/jquery/dist/jquery.min.js',
+						'build/bower_components/bootstrap/dist/js/bootstrap.min.js',
+						'build/bower_components/jquery.easing/jquery.easing.min.js',
+						'build/bower_components/jquery-migrate/jquery-migrate.min.js',
+						'build/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js',
+						'build/bower_components/jquery-placeholder/jquery.placeholder.min.js',
+						'build/bower_components/jquery-sticky/jquery.sticky.js',
+						'build/bower_components/flexslider/jquery.flexslider-min.js',
+						'build/bower_components/mixitup/src/jquery.mixitup.js',
+						'build/bower_components/parallax/deploy/jquery.parallax.min.js',
+						'build/bower_components/wow/dist/wow.min.js',
+						'src/js/analytics.js',
+						'src/js/app.js',
+						'src/tsCompiled/*.js'
+					],
 					dest: 'build/js/app.js'
 				},
 				build_css: {
-					src: ['build/bower_components/bootstrap/dist/css/bootstrap.min.css', 'build/bower_components/Ionicons/css/ionicons.min.css', 'build/bower_components/flexslider/flexslider.css', 'build/bower_components/animate.css/animate.min.css', 'build/css/style.css'],
+					src: [
+						'build/bower_components/bootstrap/dist/css/bootstrap.min.css',
+						'build/bower_components/Ionicons/css/ionicons.min.css',
+						'build/bower_components/flexslider/flexslider.css',
+						'build/bower_components/animate.css/animate.min.css',
+						'build/css/style.css'
+					],
 					dest: 'build/css/style.css'
 				}
 			},
@@ -69,7 +90,7 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files: {
-						'build/css/style.css': ['build/bower_components/bootstrap/dist/css/bootstrap.min.css', 'build/bower_components/Ionicons/css/ionicons.min.css', 'build/bower_components/flexslider/flexslider.css', 'build/bower_components/animate.css/animate.min.css', 'build/css/style.css']
+						'build/css/style.css': ['build/css/style.css']
 					}
 				}
 			}
@@ -85,7 +106,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-	grunt.registerTask('default', ['less', 'exec:jadeProd', 'ts:build', 'uglify:prod', 'copy:html', 'copy:ionicons', 'cssmin', 'clean']);
-	grunt.registerTask('dev', ['less', 'exec:jadeDev', 'ts:build', 'concat:build_js', 'concat', 'copy:html', 'copy:ionicons',]);
+	grunt.registerTask('default', ['less', 'exec:jadeProd', 'ts:build', 'concat:build_js', 'uglify:prod', 'copy:html', 'copy:ionicons', 'concat:build_css', 'cssmin', 'clean']);
+	grunt.registerTask('dev', ['less', 'exec:jadeDev', 'ts:build', 'concat:build_js', 'concat:build_css', 'copy:html', 'copy:ionicons']);
 
 };
