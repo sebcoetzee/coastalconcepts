@@ -3,3 +3,5 @@
 /project/src/tsCompiled
 /project/src/typings
 .tscache
+/bower_components
+/node_modules

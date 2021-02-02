@@ -1,0 +1,42 @@
+- var title = "Coastal Concepts - Modular Barges";
+
+include ../../../templates/header.pug
+
+body
+	include ../../../templates/navbar.pug
+
+	section#content-region-3.padding-40.page-tree-bg
+		.container
+			h3.page-tree-text
+				| Modular Barges
+	// page-tree end here
+	.space-70
+	.container.portfolio-details
+		.row
+			.col-md-8.portfolio-single-slide.margin-btm-40
+				.flexslider
+					ul.slides
+						li
+							img.img-responsive(src='/assets/img/products/modular-barge-2.jpg', alt='')
+						li
+							img.img-responsive(src='/assets/img/products/modular-barge-3.jpg', alt='')
+				// flex slider
+				.portfolio-single-desc
+					h3 Modular Barges
+					h5 Unique Design
+					p
+						| Coastal Concepts has designed a series of modular barges to suit all light and heavy loading applications. Utilising the standard container configuration of 20 and 40 foot, our barge modules can easily be transported on container vessels or securely stacked on general cargo vessels. Modular barges not only save on expensive mobilisation costs when compared to rigid barges but allow quicker transport to site with the added ability of configuring the barge as required for different operations. For light loading barges, smaller modules have been designed and can be transported within a standard container or interlocked into a container configuration.
+					h5 Jack Up Barges
+					p
+						| Barges can be ordered in varying sizes depending on load and dimensional requirements along with the addition of our signature Jack Up module with spud poles. Jack up barges provide a stable working platform for applications in high tidal and exposed areas subjected to large wave action. The Jack Up module can be added to any barge and spud pole lengths custom made to suit your application. The spud poles come in modular sections which get transported in standard size containers and bolted together onsite.
+					h5 Dry Fix Systems
+					p
+						| All our barges utilise a dry fix system which allows connection of the modules to be performed over water negating the need for divers.
+					h5 Manufacturing
+					p
+						| Construction of the barge module is handled in-house in accordance with stringent quality control specifications and all products undergo a final inspection prior to delivery to the client.
+
+			include ../../../templates/product-sidebar.pug
+	.space-70
+	include ../../../templates/footer.pug
+	include ../../../templates/scripts.pug

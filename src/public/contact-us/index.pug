@@ -1,0 +1,60 @@
+- var title = "Coastal Concepts - Contact Us";
+
+include ../../templates/header.pug
+
+body
+	include ../../templates/navbar.pug
+	// main flex slider end
+	section#content-region-3.padding-40.page-tree-bg
+		.container
+			h3.page-tree-text
+				| Contact Us
+	#map-canvas
+	// page tree end here
+	.space-70
+	.container
+		.col-md-5
+			h4.heading-mini We’d Love to Hear From You
+			p Get in touch using the contact details below:
+			p Old College Building
+			p 35 Church Street
+			p Stellenbosch, 7600
+			p South Africa
+			p Phone: +27 (0)21 883 8870
+			p
+				| Email: info@coastalconcepts.co.za
+		.col-md-6.col-md-offset-1
+			h4.heading-mini Contact us
+			.my-contact-form
+				form#contactForm(name='sentMessage', method='post', novalidate='')
+					.row
+						.col-md-6
+							.row.control-group
+								.form-group.col-xs-12.controls
+									input#name.form-control(type='text', placeholder='Name*', required='', data-validation-required-message='Please enter your name.')
+									p.help-block
+						.col-md-6
+							.row.control-group
+								.form-group.col-xs-12.controls
+									input#email.form-control(type='email', placeholder='Email Address*', required='', data-validation-required-message='Please enter your email address.')
+									p.help-block
+					.row.control-group
+						.form-group.col-xs-12
+							input#subject.form-control(type='text', placeholder='Subject')
+							p.help-block
+					.row.control-group
+						.form-group.col-xs-12.controls
+							textarea#message.form-control(rows='5', placeholder='Message*', required='', data-validation-required-message='Please enter a message.')
+							p.help-block
+					.col-md-12
+						#contactCaptcha
+					#contact-form-status-message.hidden.col-md-12
+						.space-20
+						p.success
+							| The status message will appear here.
+					.row
+						.form-group.col-xs-12.text-right(style='margin-top: -15px;')
+							button.btn.theme-btn-color.btn-lg(type='submit') Send Message
+	.space-70
+	include ../../templates/footer.pug
+	include ../../templates/scripts.pug
